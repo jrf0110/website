@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,700|Roboto+Slab:100,300' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+    <style>
+      body, html {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: #523F3E;
+        background-color: #FDF8F8;
+      }
+
+      a {
+        color: #FA5842;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      h1,h2,h3,h4,h5 {
+        font-family: 'Roboto Slab', serif;
+      }
+
+      .icon-twitter {
+        margin-left: 6px;
+      }
+
+      .container {
+        margin: 0 auto;
+      }
+
+      .site-header {
+        padding: 12px 0 12px 0;
+        background-color: #ff4e45;
+        color: #e4e460;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        font-size: 2em;
+      }
+
+      .site-header .name {
+        margin: 0;
+        font-weight: 100;
+      }
+
+      .section {
+        width: 100%;
+      }
+
+      .section .section-title {
+        font-size: 2.8em;
+        margin-bottom: 12px;
+        font-weight: 300;
+      }
+
+      .section.section-dark {
+        background: #252222;
+        color: #fff;
+      }
+
+      .section.nav {
+        overflow: hidden;
+        padding: 28px 0 0 0;
+        text-align: center;
+      }
+
+      .nav-list {
+        margin: 0 0 -10px -10px;
+        padding: 0;
+        list-style: none;
+        font-weight: 100;
+        text-align: center;
+      }
+
+      .nav-list > li {
+        width: 168px;
+        height: 140px;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .nav-list > li:first-child {
+        margin-left: 0;
+      }
+
+      .nav-list a {
+        display: inline-block;
+        opacity: 0.6;
+        color: #fff;
+        text-decoration: none;
+        -webkit-transition: opacity ease-out 0.4s;
+      }
+
+      .nav-list a:hover {
+        opacity: 1;
+      }
+
+      .nav-list a i {
+        font-size: 5em;
+        margin-bottom: 3px;
+      }
+
+      .dropdown {
+        -webkit-transition: height ease-in 0.3s;
+      }
+
+      .dropdown > .dropdown-menu {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+
+        -webkit-transition: height ease-in 0.3s, opacity ease-in 0.3s;
+      }
+
+      .dropdown.open {
+        height: 168px;
+      }
+
+      .dropdown.open > .dropdown-menu {
+        height: auto;
+        opacity: 1;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+      }
+
+      .dropdown-menu > li {
+        display: inline-block;
+      }
+
+      .section-footer {
+        margin-top: 130px;
+        border-top: solid #e0e0e0 2px;
+      }
+
+      .farewell {
+        color: #8F8F8F;
+        font-size: 3em;
+        font-family: 'Roboto Slab';
+      }
+
+      .farewell .icon-thumbs-up {
+        color: #FD8F8A;
+        font-size: 3em;
+        vertical-align: middle;
+        margin-right: 30px;
+      }
+
+      @media (min-width: 1020px) {
+        .container { width: 940px; }
+      }
+
+      @media (min-width: 845px) and (max-width: 1019px) {
+        .container { width: 774px; }
+      }
+
+      @media (min-width: 666px) and (max-width: 844px) {
+        .container { width: 590px; }
+      }
+
+      @media (min-width: 480px) and (max-width: 665px) {
+        .container { width: 430px; }
+      }
+      
+      @media (min-width: 401px) and (max-width: 480px) {
+        .container {
+          width: 100%;
+          padding: 0 20px;
+          box-sizing: border-box;
+        }
+
+        .section.nav {
+          text-align: center;
+        }
+
+        .nav-list {
+          display: inline-block;
+          text-align: left;
+          width: 340px;
+        }
+      }
+
+      @media (max-width: 400px){
+        body {
+          padding-top: 72px;
+        }
+
+        .container {
+          width: 100%;
+          padding: 0 20px;
+          box-sizing: border-box;
+        }
+
+        .site-header {
+          font-size: 1.5em;
+          position: fixed;
+          z-index: 1000;
+          width: 100%;
+          top: 0;
+        }
+
+        .nav-list {
+          display: inline-block;
+          text-align: left;
+          width: 300px;
+        }
+
+        .nav-list > li {
+          width: 146px;
+          height: 140px;
+        }
+
+        .nav-list a i {
+          font-size: 4em;
+          margin-bottom: 3px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <h2 class="name">John Fawcett</h2>
+    </header>
+
+    <nav class="section section-dark nav" id="nav">
+
+      <ul class="nav-list">
+        <li>
+          <a href="#">
+            <i class="icon-pencil"></i>
+            <br />
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="icon-twitter"></i>
+            <br />
+            @John.Awesome
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="icon-github"></i>
+            <br />
+            Github
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="icon-linkedin"></i>
+            <br />
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="icon-bookmark"></i>
+            <br />
+            Good Reads
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="icon-fighter-jet"></i>
+            <br />
+            About
+          </a>
+        </li>
+        <!-- <li class="dropdown">
+          <a href="#">
+            <i class="icon-chevron-down"></i>
+            <br />
+            More
+          </a>
+           <ul class="dropdown-menu">
+            <li>
+              <a href="#">Insults</a>
+              <a href="#">Url Shortener</a>
+              <a href="#">MongoPg</a>
+              <a href="#">Claude.js</a>
+              <a href="#">Sublime Tricks</a>
+            </li>
+          </ul>
+        </li> -->
+      </ul>
+
+    </nav>
+
+    <section class="section about container" id="about">
+      <h1 class="section-title">About</h1>
+      <p class="lead">
+        <em>Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.</em> -Richard Feynman
+      </p>
+      <p>
+        I'm John. I'm a dev @ <a href="http://goodybag.com">Goodybag</a> working on node.js HTTP APIs, Backbone apps. I'm known to <a href="http://blog.j0.hn">blog</a> or create <a href="https://github.com/goodybag/mongo-sql">Open Source Software</a> or to even <a href="http://www.youtube.com/watch?v=8GwoOCNLnnM">sing songs about JavaScript</a>. I love doing UI development. Currenly using a Require+Backbone+Less+Jam stack and loving it. I'm constantly building single-page web apps. I can hack on Titanium and Phone Gap, and my back-end of choice is a cocktail of node.js and PostgreSql. MongoDB is fantastic for getting off the ground quickly, but you can't beat Postgres. Oh, now I'm rambling
+      </p>
+    </section>
+
+
+    <footer class="container section section-footer">
+      <p class="farewell">
+        <i class="icon-thumbs-up"></i>
+        Well, Goodbye!
+      </p>
+    </footer>
+  </body>
+</html>
